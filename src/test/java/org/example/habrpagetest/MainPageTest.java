@@ -47,6 +47,13 @@ public class MainPageTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Наполнение дропдауна в шапке")
+    public void dropDownIn() {
+
+        WebElement dropDownButton = driver.findElement(By.xpath("//button [@class='tm-header__dropdown-toggle']"));
+        dropDownButton.click();
+        assertTrue(driver.findElement(By.xpath("//a [@class='tm-our-projects__item']")).isDisplayed(), "Дропдаун пустой");
+        assertTrue(driver.findElement(By.xpath("//a [contains(text(),'Хабр')]")).isDisplayed(),"Текст не найден");
+    }
 
 }
