@@ -53,7 +53,6 @@ public class MainPageTest {
         WebElement dropDownButton = driver.findElement(By.xpath("//button [@class='tm-header__dropdown-toggle']"));
         dropDownButton.click();
         assertTrue(driver.findElement(By.xpath("//a [@class='tm-our-projects__item']")).isDisplayed(), "Дропдаун пустой");
-        assertTrue(driver.findElement(By.xpath("//a [contains(text(),'Хабр')]")).isDisplayed(),"Текст не найден");
-    }
-
+        assertTrue(driver.findElement(By.xpath("//div[@data-test-id='our-projects']//a[contains(., 'Хабр') or contains(., 'Q&A') or contains(., 'Карьера') or contains (., 'Фриланс')]")).isDisplayed(),"Текст не найден");
+            }
 }
