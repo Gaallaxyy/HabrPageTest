@@ -40,9 +40,6 @@ public class MainPageTest {
 
         WebElement authorButton = driver.findElement(By.xpath("//* [contains(text(), 'Как стать автором')]"));
         authorButton.click();
-//        WebElement tabMostImportant = driver.findElement(By.xpath("//a [contains(text(), 'Самое важное ')]"));
-//        WebElement tabNewAuthor = driver.findElement(By.xpath("//a [contains(text(), 'Новые авторы ')]"));
-//        WebElement tabWaitingInvite = driver.findElement(By.xpath("//a [contains(text(), 'Ожидают приглашения ')]"));
         assertTrue(driver.findElement(By.xpath("//a [contains(text(), 'Самое важное')]")).isDisplayed(), "Вкладка 'Самое важное' не найдена");
         assertTrue(driver.findElement(By.xpath("//a [contains(text(), 'Новые авторы')]")).isDisplayed(), "Вкладка 'Новые авторы' не найдена");
         assertTrue(driver.findElement(By.xpath("//a [contains(text(), 'Ожидают приглашения')]")).isDisplayed(), "Вкладка 'Ожидают приглашения' не найдена");
