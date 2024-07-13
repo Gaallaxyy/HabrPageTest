@@ -53,7 +53,7 @@ public class MainPageTest {
         dropDownButton.click();
         driver.findElement(By.xpath("//div [@class='tm-dropdown__body tm-dropdown__body_left']")).isEnabled();
         assertTrue(driver.findElement(By.xpath("//div[@data-test-id='our-projects']" +
-                "//* [contains(., 'Хабр') and contains(., 'Q&A') and contains(., 'Карьера') and contains (., 'Фриланс')]"))
+                        "//* [contains(., 'Хабр') and contains(., 'Q&A') and contains(., 'Карьера') and contains (., 'Фриланс')]"))
                 .isDisplayed(), "Требуемые элементы дропдауна не найдены");
     }
 }
