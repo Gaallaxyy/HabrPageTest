@@ -38,7 +38,7 @@ public class MainPageTest {
     @DisplayName("Проверка вкладок в разделе 'Как стать автором'")
     public void lookingTabs() {
 
-        WebElement authorButton = driver.findElement(By.xpath("//* [contains(text(), 'Как стать автором')]"));
+        WebElement authorButton = driver.findElement(By.xpath("// *[@class='tm-header__container']//* [contains(text(), 'Как стать автором')]"));
         authorButton.click();
         assertTrue(driver.findElement(By.xpath("//a [contains(text(), 'Самое важное')]")).isDisplayed(), "Вкладка 'Самое важное' не найдена");
         assertTrue(driver.findElement(By.xpath("//a [contains(text(), 'Новые авторы')]")).isDisplayed(), "Вкладка 'Новые авторы' не найдена");
@@ -51,7 +51,9 @@ public class MainPageTest {
 
         WebElement dropDownButton = driver.findElement(By.xpath("//button [@class='tm-header__dropdown-toggle']"));
         dropDownButton.click();
-        assertTrue(driver.findElement(By.xpath("//a [@class='tm-our-projects__item']")).isDisplayed(), "Дропдаун пустой");
-        assertTrue(driver.findElement(By.xpath("//div[@data-test-id='our-projects']//a[contains(., 'Хабр') or contains(., 'Q&A') or contains(., 'Карьера') or contains (., 'Фриланс')]")).isDisplayed(), "Текст не найден");
+        driver.findElement(By.xpath("//div [@class='tm-dropdown__body tm-dropdown__body_left']")).isEnabled();
+        assertTrue(driver.findElement(By.xpath("//div[@data-test-id='our-projects']" +
+                "//* [contains(., 'Хабр') and contains(., 'Q&A') and contains(., 'Карьера') and contains (., 'Фриланс')]"))
+                .isDisplayed(), "Требуемые элементы дропдауна не найдены");
     }
 }
