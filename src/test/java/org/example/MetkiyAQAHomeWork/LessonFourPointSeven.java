@@ -59,7 +59,7 @@ public class LessonFourPointSeven {
         ArrayList tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1).toString());
         String url = driver.getCurrentUrl();
-        assertEquals(url, "https://www.selenium.dev/", "Ссылка ведет на другой сайт");
+        assertEquals("https://www.selenium.dev/", url, "Ссылка ведет на другой сайт");
     }
 
     public void FirstLink(List<WebElement> results, int num) {
