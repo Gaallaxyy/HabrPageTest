@@ -1,4 +1,4 @@
-package org.example.habrpagetest;
+package org.example.MetkiyAQAHomeWork;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +17,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LessonExamples {
+public class LessonFourPointSix_Examples {
     private WebDriver driver;
 
 
