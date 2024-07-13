@@ -54,7 +54,7 @@ public class LessonFourPointSeven {
         List<WebElement> results = wait.until(ExpectedConditions.
                 visibilityOfAllElements(driver.findElements(links)));
 
-        FirstLink(results, 0);
+        FirstLink(results, 4);
         System.out.println("Клик по ссылке");
         ArrayList tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1).toString());
@@ -63,7 +63,7 @@ public class LessonFourPointSeven {
     }
 
     public void FirstLink(List<WebElement> results, int num) {
-        results.get(0).click();
+        results.get(num).click();
     }
 
 }
